@@ -1,0 +1,12 @@
+/* Custom CSS for Site Surveyor */
+body {
+    font-family: sans-serif;
+}
+
+.feature-card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+}

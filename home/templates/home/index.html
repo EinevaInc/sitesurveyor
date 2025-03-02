@@ -1,0 +1,38 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="py-5 text-center">
+    <h1 class="display-4">Revolutionizing Land Surveying</h1>
+    <p class="lead">{{ message }}</p>
+    <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+    <a href="#" class="btn btn-secondary btn-lg">Learn More</a>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Key Features</h2>
+        <div class="row">
+            {% for feature in features %}
+                <div class="col-md-4">
+                    {% include "includes/feature_card.html" with feature=feature %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Get Involved</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-4 text-center">
+                 <a href="#" class="btn btn-success btn-lg mb-3">Donate</a>
+            </div>
+            <div class="col-md-4 text-center">
+                <a href="#" class="btn btn-info btn-lg mb-3">Request a Feature</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
