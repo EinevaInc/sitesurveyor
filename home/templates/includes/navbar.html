@@ -1,29 +1,31 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="{% url 'index' %}">Site Surveyor</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                   <a class="nav-link" href="#">About</a>
-                </li>
-                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="btn btn-primary" href="#">Donate</a>
-                </li>
-            </ul>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">  <div class="container px-5">
+    <a class="navbar-brand" href="{% url 'home:index' %}">
+        <i class="fas fa-map-marked-alt me-2"></i>Site Surveyor  </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'home:index' %}">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownFeatures" href="#" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">Features</a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownFeatures">
+                    <li><a class="dropdown-item" href="#">Engineering Survey</a></li>
+                    <li><a class="dropdown-item" href="#">Mining Survey</a></li>
+                    <li><a class="dropdown-item" href="#">Topographic Survey</a></li>
+                    <li><a class="dropdown-item" href="#">Remote Sensing</a></li>
+                    <li><hr class="dropdown-divider"></li>  <li><a class="dropdown-item" href="{% url 'home:feature_request' %}">Request a Feature</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/EinevaInc/sitesurveyor" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> GitHub </a>
+            </li>
+        </ul>
     </div>
+</div>
 </nav>

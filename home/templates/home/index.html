@@ -2,37 +2,173 @@
 {% load static %}
 
 {% block content %}
-<section class="py-5 text-center">
-    <h1 class="display-4">Revolutionizing Land Surveying</h1>
-    <p class="lead">{{ message }}</p>
-    <a href="#" class="btn btn-primary btn-lg">Get Started</a>
-    <a href="#" class="btn btn-secondary btn-lg">Learn More</a>
+
+<section class="py-5 text-center bg-image" style="background-image: url('https://images.unsplash.com/photo-1604881988758-f76ad2f7aac1?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center; color: white;">
+    <div class="container">
+        <h1 class="display-3 fw-bold">Site Surveyor: The Future of Open-Source Land Surveying</h1>
+        <p class="lead fs-4">
+            Precise, efficient, and collaborative surveying tools, freely available to all.
+        </p>
+        <div class="mt-4">
+            <a href="#features" class="btn btn-primary btn-lg me-2">Explore Features</a>
+            <a href="https://github.com/EinevaInc/sitesurveyor" class="btn btn-outline-light btn-lg" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
+    </div>
 </section>
 
-<section class="py-5 bg-light">
+<section id="features" class="py-5 bg-light">
     <div class="container">
-        <h2 class="text-center mb-4">Key Features</h2>
+        <h2 class="text-center mb-5">Key Features - Designed for Modern Surveying</h2>
         <div class="row">
             {% for feature in features %}
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-6 mb-4">
                     {% include "includes/feature_card.html" with feature=feature %}
                 </div>
             {% endfor %}
+        </div>
+        <div class="text-center mt-4">
+            <a href="#" class="btn btn-outline-secondary btn-lg">See All Features</a>
         </div>
     </div>
 </section>
 
 <section class="py-5">
     <div class="container">
-        <h2 class="text-center mb-4">Get Involved</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-4 text-center">
-                 <a href="#" class="btn btn-success btn-lg mb-3">Donate</a>
+        <h2 class="text-center mb-5">Built for Every Surveying Discipline</h2>
+        <div class="row">
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-drafting-compass fa-3x text-primary mb-3"></i>  <h5 class="card-title">Engineering Surveying</h5>
+                        <p class="card-text">Precise tools for road design, construction layout, as-builts, and infrastructure projects.</p>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4 text-center">
-                <a href="#" class="btn btn-info btn-lg mb-3">Request a Feature</a>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-hammer fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Mining Surveying</h5>
+                        <p class="card-text">Efficient solutions for volume calculations, mine planning, and resource management.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-map fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Topographic Surveying</h5>
+                        <p class="card-text">Create detailed, accurate maps of land features, contours, and elevations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-satellite-dish fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Remote Sensing</h5>
+                        <p class="card-text">Integrate and process data from drones, LiDAR, and satellite imagery for advanced analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="text-center mt-4">
+            <a href="#" class="btn btn-outline-secondary btn-lg">Learn More About Categories</a>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 class="mb-4">Why Choose Open-Source?</h2>
+                <ul class="list-unstyled fs-5">
+                    <li class="mb-3"><i class="fas fa-check-circle fa-lg me-2 text-success"></i> <strong>Cost-Effective:</strong> Eliminate expensive licensing fees.</li>
+                    <li class="mb-3"><i class="fas fa-check-circle fa-lg me-2 text-success"></i> <strong>Customizable:</strong> Tailor the software to your needs.</li>
+                    <li class="mb-3"><i class="fas fa-check-circle fa-lg me-2 text-success"></i> <strong>Community-Driven:</strong> Benefit from a global community.</li>
+                    <li class="mb-3"><i class="fas fa-check-circle fa-lg me-2 text-success"></i> <strong>Transparent:</strong> Full access to the source code.</li>
+                    <li class="mb-3"><i class="fas fa-check-circle fa-lg me-2 text-success"></i> <strong>Future-Proof:</strong> Avoid vendor lock-in.</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <img src="https://images.unsplash.com/photo-1596079890744-c2125d2d77a5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kZXxlbnwwfHwwfHx8MA%3D%3D" alt="Open Source Code" class="img-fluid rounded shadow">
             </div>
         </div>
     </div>
 </section>
+
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Testimonials</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text fst-italic">"Site Surveyor has revolutionized the way our team works..."</p>
+                        <p class="fw-bold">- John S., Lead Surveyor</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text fst-italic">"As a small surveying firm, we were struggling to afford expensive software..."</p>
+                        <p class="fw-bold">- Maria L., Surveying Business Owner</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                      <p class="card-text fst-italic">"I love contributing to Site Surveyor! It's a fantastic project..."</p>
+                      <p class="fw-bold">- David K., Open-Source Contributor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-dark text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Join the Open-Source Movement</h2>
+        <p class="lead">Contribute to the development of Site Surveyor and help shape the future of land surveying.</p>
+        <a href="https://github.com/EinevaInc/sitesurveyor" class="btn btn-outline-light btn-lg" target="_blank" rel="noopener noreferrer">Contribute on GitHub</a>
+    </div>
+</section>
+
+<section id="about" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>About Site Surveyor</h2>
+          <p>
+            Site Surveyor is a free and open-source software project dedicated
+            to providing land surveyors with a modern, comprehensive, and
+            user-friendly platform.
+          </p>
+          <p>
+            Our goal is to create a collaborative environment where surveyors,
+            developers, and researchers can work together.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <img src="https://images.unsplash.com/photo-1621844841526-a7eb5564b144?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Surveyor in Field" class="img-fluid rounded shadow">
+        </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="mb-4">Get Involved</h2>
+        <p class="lead">
+            Ready to get started? Register to create an account, explore the features,
+            and join our growing community!
+        </p>
+        <a href="#" class="btn btn-success btn-lg me-2 mb-3">Register Now</a>  <a href="{% url 'home:feature_request' %}" class="btn btn-info btn-lg me-2 mb-3">Request a Feature</a>
+        <a href="#" class="btn btn-secondary btn-lg mb-3">Donate</a>  </div>
+</section>
+
 {% endblock %}

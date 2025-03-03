@@ -1,12 +1,220 @@
 /* Custom CSS for Site Surveyor */
+
 body {
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif; /* Modern, readable font */
+    line-height: 1.6;
+    color: #333; /* Dark gray for better readability */
+    background-color: #f8f9fa; /* Light gray background */
 }
 
+/* Hero Section */
+.bg-image {
+    position: relative;
+    overflow: hidden;
+    height: 500px; /* Adjust as needed */
+}
+
+.bg-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text contrast */
+    z-index: 1;
+}
+
+.bg-image .container {
+    position: relative; /* Ensure content is above the overlay */
+    z-index: 2;
+}
+
+
+.display-3 { /* Larger heading for hero */
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.fs-4 { /* Larger font size for lead */
+    font-size: 1.25rem;
+}
+
+/* Feature Cards */
 .feature-card {
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden;
+    height: 100%; /* Make cards equal height */
+    display: flex;
+    flex-direction: column;
 }
 
 .feature-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px); /* Subtle lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+.feature-card .card-body{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.feature-card .card-text {
+    flex-grow: 1;
+}
+
+.feature-button {
+    margin-top: auto; /* Push button to bottom */
+    width: 100%;
+    transition: background-color 0.2s, color 0.2s; /* Smooth transition */
+}
+.feature-button:hover{
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: white;
+}
+
+/* Category Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: box-shadow 0.2s ease-in-out;
+}
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.card .card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card .card-text {
+   flex-grow: 1;
+}
+/* General Spacing & Alignment */
+.py-5 {
+    padding-top: 3rem !important; /* Consistent padding */
+    padding-bottom: 3rem !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.mb-5 {
+   margin-bottom: 3rem !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+/* Button Styles */
+.btn-lg {
+    padding: 0.75rem 1.5rem; /* Larger buttons */
+    font-size: 1.1rem;
+}
+
+.btn-outline-light:hover {
+    color: #343a40; /* Dark text on hover for outline buttons */
+    background-color: white;
+}
+
+/* Feature Request Form Styles */
+
+.form-label {
+    font-weight: bold; /* Make labels bold */
+}
+
+.form-control, .form-select {
+    margin-bottom: 1rem; /* Add spacing between form elements */
+    border-radius: 5px; /* Slightly rounded corners */
+    border: 1px solid #ced4da; /* Bootstrap's default border color */
+    padding: 0.5rem 0.75rem; /* Adjust padding */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Smooth transition on focus*/
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #86b7fe; /* Highlight border on focus */
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); /* Bootstrap's focus shadow */
+}
+
+.form-check-input {
+    margin-top: 0.25rem; /* Adjust vertical alignment */
+    margin-right: 0.5rem;
+}
+
+.form-check-label {
+    font-weight: normal; /* Ensure label isn't bold */
+}
+
+.errorlist { /* Style Django's error messages */
+    color: #dc3545; /* Bootstrap's danger color */
+    list-style: none; /* Remove bullet points */
+    padding-left: 0;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.btn-primary { /* Ensure button consistency */
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+form button[type="submit"] {
+	width: 100%;
+}
+/* Navbar Styles */
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem; /* Larger brand text */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,.8); /* Lighter text for better contrast */
+    transition: color 0.2s ease-in-out; /* Smooth color transition */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: rgba(255,255,255,1); /* White on hover/focus */
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fff;  /* Ensure active link is white */
+}
+.navbar{
+    background-color: #0d6efd !important;
+}
+.dropdown-menu {
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 0.5rem 0;
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #e9ecef; /* Light gray background on hover/focus */
+    color: #000;
+}
+
+/* Custom style for the GitHub icon (optional) */
+.fa-github {
+    margin-right: 0.25rem; /* Add some spacing between icon and text */
 }

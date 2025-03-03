@@ -63,17 +63,29 @@ WSGI_APPLICATION = 'sitesurveyor.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# #LOCAL DATABASE
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',  # Or 'django.db.backends.mysql', etc.
+#         'NAME': 'postgres',       # Replace with your database name
+#         'USER': 'postgres',          # Replace with your database user
+#         'PASSWORD': 'console',      # Replace with your database password
+#         'HOST': '34.30.200.71',             # Or your database server's address
+#         'PORT': '5432',                  # Or your database server's port
+#     }
+# }
+
+#CLOUD DATABASE
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',  # Or 'django.db.backends.mysql', etc.
         'NAME': 'postgres',       # Replace with your database name
         'USER': 'postgres',          # Replace with your database user
-        'PASSWORD': 'console',      # Replace with your database password
-        'HOST': '34.30.200.71',             # Or your database server's address
+        'PASSWORD': '7a]_/"3;TiJ~,KCq',      # Replace with your database password
+        'HOST': '34.44.14.117',             # Or your database server's address
         'PORT': '5432',                  # Or your database server's port
     }
 }
-
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
@@ -107,3 +119,12 @@ STATICFILES_DIRS = [
 STATIC_ROOT = BASE_DIR / 'staticfiles'  # For collectstatic
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Email Settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'sitesurveyorinternational@gmail.com'  # Your Gmail address
+EMAIL_HOST_PASSWORD = 'laritabragostamandokazando'  # ***NOT*** your regular Gmail password!
+DEFAULT_FROM_EMAIL = 'sitesurveyorinternational@gmail.com' # Set the default from email
