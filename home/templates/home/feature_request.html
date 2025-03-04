@@ -1,10 +1,107 @@
-{% extends "home/base.html" %}
+{% extends "base.html" %}
 
 {% block content %}
-<h2>Feature Request</h2>
-<form method="post" novalidate>
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit" class="btn btn-primary">Submit Request</button>
-</form>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h1 class="card-title fs-3">Request a Feature</h1>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        Have an idea for a feature that would make Site Surveyor even better? Let us know!
+                    </p>
+
+                    <form method="post" novalidate>
+                        {% csrf_token %}
+
+                        {% if error_message %}
+                            <div class="alert alert-danger" role="alert">
+                                {{ error_message }}
+                            </div>
+                        {% endif %}
+
+                        <div class="mb-3">
+                            {{ form.name.label_tag }}
+                            {{ form.name }}
+                            {% if form.name.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {{ form.name.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="mb-3">
+                            {{ form.email.label_tag }}
+                            {{ form.email }}
+                            {% if form.email.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {{ form.email.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="mb-3">
+                            {{ form.feature_title.label_tag }}
+                            {{ form.feature_title }}
+                            {% if form.feature_title.errors %}
+                                 <div class="invalid-feedback d-block">
+                                    {{ form.feature_title.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="mb-3">
+                            {{ form.category.label_tag }}
+                            {{ form.category }}
+                             {% if form.category.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {{ form.category.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                         <div class="mb-3">
+                            {{ form.urgency.label_tag }}
+                            {{ form.urgency }}
+                             {% if form.urgency.errors %}
+                                <div class="invalid-feedback d-block">
+                                   {{ form.urgency.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="mb-3">
+                            {{ form.feature_description.label_tag }}
+                            {{ form.feature_description }}
+                             {% if form.feature_description.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {{ form.feature_description.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            {{ form.agree_to_terms }}
+                            {{ form.agree_to_terms.label_tag }}
+
+                            {% if form.agree_to_terms.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {{ form.agree_to_terms.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+
+
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary">Submit Request</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

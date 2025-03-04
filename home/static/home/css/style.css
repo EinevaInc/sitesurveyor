@@ -123,6 +123,8 @@ body {
     background-color: white;
 }
 
+/* ... (Your other styles) ... */
+
 /* Feature Request Form Styles */
 
 .form-label {
@@ -134,7 +136,7 @@ body {
     border-radius: 5px; /* Slightly rounded corners */
     border: 1px solid #ced4da; /* Bootstrap's default border color */
     padding: 0.5rem 0.75rem; /* Adjust padding */
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Smooth transition on focus*/
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Smooth transition on focus */
 }
 
 .form-control:focus, .form-select:focus {
@@ -152,12 +154,13 @@ body {
     font-weight: normal; /* Ensure label isn't bold */
 }
 
-.errorlist { /* Style Django's error messages */
+.errorlist, .invalid-feedback { /* Style Django's error messages */
     color: #dc3545; /* Bootstrap's danger color */
     list-style: none; /* Remove bullet points */
     padding-left: 0;
     margin-top: 0.25rem;
     font-size: 0.875rem;
+    display: block; /* Ensure errors are displayed */
 }
 
 .btn-primary { /* Ensure button consistency */
@@ -173,6 +176,7 @@ body {
 form button[type="submit"] {
 	width: 100%;
 }
+
 /* Navbar Styles */
 
 .navbar-brand {

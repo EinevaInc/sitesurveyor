@@ -1,62 +1,60 @@
 from django.shortcuts import render, redirect
-from .forms import FeatureRequestForm  # Import the form!
+from .forms import FeatureRequestForm
 # from django.core.mail import send_mail # Removed: Email sending is on hold
 # from django.conf import settings # Removed
 
 def index(request):
-    """
-    View function for the home page of the site.
-    """
+      # ... (your existing index view code) ...
     features = [
         {
             'title': 'Import & Export Various Data Formats',
             'description': 'Seamlessly import and export data in industry-standard formats like CSV, TXT, DXF, DWG, LandXML, Shapefiles, and raw data from total stations and GNSS receivers.',
-            'icon': 'file-earmark-arrow-down'  # Example Bootstrap icon
+            'icon': 'fas fa-file-import'
         },
         {
             'title': 'Coordinate Systems & Transformations',
             'description': 'Work with geographic, projected, and local grid coordinate systems. Perform accurate transformations between different systems, including geoid model support.',
-            'icon': 'geo-alt'
+            'icon': 'fas fa-globe-americas'
         },
         {
             'title': 'Comprehensive Calculations',
             'description': 'Perform a wide range of calculations, including distance, angle, area, traverse adjustments (Compass, Transit, Crandall, Least Squares), and COGO calculations.',
-            'icon': 'calculator'
+            'icon': 'fas fa-calculator'
         },
         {
             'title': 'Advanced Calculations',
             'description': 'Handle complex calculations like earthwork (cut/fill), vertical and horizontal curves, slope, and grade. Generate 3D surface models (TINs, DEMs).',
-            'icon': 'calculator-fill'
+            'icon': 'fas fa-chart-line'
         },
         {
             'title': 'CAD Integration',
             'description': 'Import and export DXF/DWG files with improved fidelity. Utilize basic CAD editing tools directly within the software.',
-            'icon': 'pencil-square'
+            'icon': 'fas fa-drafting-compass'
         },
         {
             'title': 'Point Cloud Processing',
             'description': 'Import, visualize, and process point cloud data from LiDAR or photogrammetry. Filter, classify, and generate surfaces from point clouds.',
-            'icon': 'cloud-arrow-down'
+            'icon': 'fas fa-cloud'
         },
         {
             'title': 'Engineering Surveying Tools',
             'description': 'Access specialized tools for road design, profile and cross-section generation, and stakeout tasks.',
-            'icon': 'wrench-adjustable-circle'  # Example: Engineering-related icon
+            'icon': 'fas fa-drafting-compass'
         },
         {
             'title': 'Mining Surveying Tools',
             'description': 'Perform volume calculations, stockpile monitoring, and access pit design tools for mining operations.',
-            'icon': 'hammer' # Example: Mining related icon
+            'icon': 'fas fa-hammer'
         },
          {
             'title': 'Topographic Surveying Tools',
             'description': 'Generate contours, edit TINs, and manage breaklines for detailed topographic mapping.',
-            'icon': 'map'
+            'icon': 'fas fa-map'
         },
         {
             'title': 'Remote Sensing Integration',
             'description': 'Work with orthophotos and DEM data. Extract features from remote sensing imagery.',
-            'icon': 'globe-americas'
+            'icon': 'fas fa-satellite-dish'
         },
 
     ]
