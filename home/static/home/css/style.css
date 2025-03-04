@@ -5,6 +5,20 @@
     --primary-light: #e9f2f8;
     --survey-orange: #ff6b35;
     --terrain-green: #3a8a5f;
+    --bg-color: #ffffff;
+    --text-color: #212529;
+    --card-bg: #ffffff;
+}
+
+[data-bs-theme="dark"] {
+    --primary: #6caddf;
+    --primary-dark: #4a8ec4;
+    --primary-light: #1a3650;
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --card-bg: #2d2d2d;
+    --survey-orange: #ff8b5e;
+    --terrain-green: #4daa7f;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
@@ -12,8 +26,8 @@
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f8f9fa;
+    color: var(--text-color);
+    background-color: var(--bg-color);
 }
 
 /* Enhanced Hero Section */
@@ -64,7 +78,7 @@ body {
     border-radius: 1.5rem;
     border: none;
     overflow: hidden;
-    background: white;
+    background: var(--card-bg);
     position: relative;
     transform: translateY(0);
 }
@@ -118,7 +132,7 @@ body {
 /* Enhanced Testimonials */
 .testimonial-card {
     border-left: 4px solid var(--primary);
-    background: white;
+    background: var(--card-bg);
     border-radius: 1rem;
     transition: all 0.3s ease;
     padding: 2rem;
@@ -183,9 +197,10 @@ body {
 
 /* Category Cards */
 .card {
-    border: none;
+    border: 1px solid rgba(0,0,0,0.125);
     border-radius: 10px;
     transition: box-shadow 0.2s ease-in-out;
+    background-color: var(--card-bg);
 }
 .card:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -271,7 +286,7 @@ form button[type="submit"] {
     color: #fff;  /* Ensure active link is white */
 }
 .navbar{
-    background-color: #0d6efd !important;
+    background-color: var(--primary) !important;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;

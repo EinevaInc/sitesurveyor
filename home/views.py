@@ -75,3 +75,36 @@ def feature_request_view(request):
         form = FeatureRequestForm()
 
     return render(request, 'home/feature_request.html', {'form': form})
+
+def about_view(request):
+    context = {
+        'team_members': [
+            {'name': 'Consolation Mangena', 'role': 'Founder and Software Engineer', 'bio': '...'},
+            {'name': 'Mukudzei Sibanda', 'role': 'GIS Specialist', 'bio': '...'},
+        ],
+        'mission': "Our mission is to democratize land surveying technology..."
+    }
+    return render(request, 'home/about.html', context)
+
+def contact_view(request):
+    return render(request, 'home/contact.html')
+
+def documentation_view(request):
+    docs = [
+        {'title': 'Getting Started', 'content': '...'},
+        {'title': 'API Reference', 'content': '...'}
+    ]
+    return render(request, 'home/documentation.html', {'docs': docs})
+
+def blog_view(request):
+    posts = [
+        {'title': 'Open Source in Surveying', 'date': '2024-03-01', 'content': '...'}
+    ]
+    return render(request, 'home/blog.html', {'posts': posts})
+
+def toggle_theme(request):
+    if request.method == 'POST':
+        current_theme = request.session.get('theme_mode', 'light')
+        new_theme = 'dark' if current_theme == 'light' else 'light'
+        request.session['theme_mode'] = new_theme
+    return redirect(request.META.get('HTTP_REFERER', 'home:index'))
