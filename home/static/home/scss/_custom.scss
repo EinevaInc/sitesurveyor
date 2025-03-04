@@ -1,0 +1,42 @@
+// Custom Theme Variables
+$primary: #2a5d84; // Professional survey blue
+$secondary: #6c757d;
+$success: #3a8a5f;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #343a40;
+
+// Enable gradient utilities
+$enable-gradients: true;
+
+// Custom theme colors map
+$custom-theme-colors: (
+  "primary-dark": #1e455f,
+  "primary-light": #e9f2f8,
+  "survey-orange": #ff6b35,
+  "terrain-green": #3a8a5f
+);
+
+// Merge with default theme colors
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
+// Custom navbar
+$navbar-dark-color: rgba(white, .8);
+$navbar-dark-hover-color: white;
+$navbar-dark-active-color: white;
+
+// Card customization
+$card-cap-bg: rgba($primary, .1);
+$card-border-width: 0;
+$card-box-shadow: 0 0.5rem 1rem rgba($dark, .15);
+
+// Button customization
+$btn-border-radius: .5rem;
+$btn-padding-x: 1.5rem;
+$btn-font-weight: 600;
+
+// Form control customization
+$input-border-radius: .35rem;
+$input-btn-focus-box-shadow: 0 0 0 .25rem rgba($primary, .3); 
