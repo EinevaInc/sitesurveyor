@@ -1,10 +1,10 @@
-# 🌍 SiteSurveyor - Open-Source Geospatial Intelligence Platform
+# 🌍 SiteSurveyor - Open-Source Land Surveying Software
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Django Version](https://img.shields.io/badge/django-4.2-brightgreen.svg)](https://www.djangoproject.com/)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/EinevaInc/sitesurveyor/pulls)
 
-**Revolutionizing Land Surveying Through Open-Source Innovation**
+**The Future of Opensource Land Surveying**
 
 <img src="https://images.unsplash.com/photo-1604881988758-f76ad2f7aac1" alt="SiteSurveyor in Action" style="border-radius: 10px; margin: 20px 0" width="800">
 
